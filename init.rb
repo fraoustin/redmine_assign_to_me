@@ -45,7 +45,7 @@ end
 Redmine::Plugin.register :redmine_assign_to_me do
   name 'Redmine Assign To Me plugin'
   author 'Frederic AOUSTIN'
-  description 'add "me" as default value for assign when create issue'
+  description 'add "me" as default value for assign when value is null'
   url "http://www.github.com/fraoustin/redmine_assign_to_me" if respond_to?(:url)
   version '0.1.1'
   requires_redmine :version_or_higher => '2.3.0'
