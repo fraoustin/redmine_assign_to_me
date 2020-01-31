@@ -1,6 +1,4 @@
-# Redmine Admonition Plugin
-
-From idea https://github.com/dseifert/redmine_wiki_notes
+# Redmine Assign to me Plugin
 
 ## Plugin installation
 
@@ -12,36 +10,14 @@ with a Dockerfile
 ```
    FROM redmine
    WORKDIR /usr/src/redmine/plugins
-   RUN git clone https://github.com/fraoustin/redmine_admonition.git
+   RUN git clone https://github.com/fraoustin/redmine_assign_to_me.git
    WORKDIR /usr/src/redmine/
 ```
  
 
 ## Usage
 
-The following macros are added:
-
-* note
-* info
-* warning
-* alert
-
-which can be used in one of three ways:
-
-```
-   {{note(text with *wiki formatting*)}}
-
-   {{note
-   Alternately, you can put blocks of *wiki-formatted* text here.
-   }}
-
-   {{note(Or if you really want)
-   You can do both...
-   }}
-```
- 
-This displays a block in the wiki page with a corresponding
-icon and the specified text.
+When create a new issue, assign value is me
 
 ## License
 
