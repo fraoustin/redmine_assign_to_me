@@ -34,7 +34,7 @@ if Rails::VERSION::MAJOR >= 5
   end
 elsif Rails::VERSION::MAJOR >= 3
   ActionDispatch::Callbacks.to_prepare do
-    init_admonition
+    init_assign_to_me
   end
 else
   Dispatcher.to_prepare :redmine_assign_to_me do
@@ -45,8 +45,8 @@ end
 Redmine::Plugin.register :redmine_assign_to_me do
   name 'Redmine Assign To Me plugin'
   author 'Frederic AOUSTIN'
-  description 'add "me" as default value for assign when create issue'
-  url "http://www.github.com/fraoustin/edmine_assign_to_me" if respond_to?(:url)
-  version '0.1.0'
+  description 'add "me" as default value for assign when value is null'
+  url "http://www.github.com/fraoustin/redmine_assign_to_me" if respond_to?(:url)
+  version '0.1.1'
   requires_redmine :version_or_higher => '2.3.0'
 end
